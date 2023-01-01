@@ -1,7 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import { setupListeners } from "@reduxjs/toolkit/query";
-
 import todoSlice from "./todoSlice";
 import { todoApi } from "./apiSlice";
 

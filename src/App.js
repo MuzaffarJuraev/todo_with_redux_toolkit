@@ -4,15 +4,12 @@ import { Wrapper } from "./components/Wrapper";
 import Navbar from "./components/Navbar";
 import Todo from "./components/Todo";
 import { getTodoAsyncThunk } from "./redux/todoSlice";
-import { useGetTodoQuery } from "./redux/apiSlice";
 
 function App() {
   const todo = useSelector((state) => state.todo);
   const dispatch = useDispatch();
-  const { data, error, isLoading } = useGetTodoQuery();
-  console.log("data", data);
   useEffect(() => {
-    // dispatch(getTodoAsyncThunk());
+    dispatch(getTodoAsyncThunk());
   }, []);
   return (
     <Wrapper>
