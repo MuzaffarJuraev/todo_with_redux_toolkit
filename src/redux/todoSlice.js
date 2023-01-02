@@ -14,7 +14,7 @@ export const getTodoAsyncThunk = createAsyncThunk(
 export const delTodoAsyncThunk = createAsyncThunk(
   "todo/delTodoAsyncThunk",
   async ({ id }, { dispatch }) => {
-    const resp = await fetch(`${BASE_URL}/todos${id}`, {
+    const resp = await fetch(`${BASE_URL}/todos/${id}`, {
       method: "DELETE",
       headers: { "Content-type": "aplication/json" },
     });

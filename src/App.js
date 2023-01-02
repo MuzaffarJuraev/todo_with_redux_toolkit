@@ -10,7 +10,10 @@ function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getTodoAsyncThunk());
-  }, []);
+    return () => {
+      dispatch();
+    };
+  }, [dispatch]);
   return (
     <Wrapper>
       <Navbar />
